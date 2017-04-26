@@ -10,13 +10,13 @@ function initialize() {
 	var address = $('#map-input').text();
 
   var mapOptions = {
-    center: latlng,
+    center: geocoder,
     scrollWheel: false,
     zoom: 15
   };
 
   var marker = new google.maps.Marker({
-    position: latlng,
+    position: geocoder,
     url: '/',
     animation: google.maps.Animation.DROP
   });
