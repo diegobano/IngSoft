@@ -150,19 +150,26 @@
                             position: myCenter,
                             icon: image,
                             shape: shape,
-                            title: "FavoriteSeller"
+                            title: "FavoriteSeller",
+                            url: "SellerBuyerInterface.html"
                         });
                         marker3 = new google.maps.Marker({
                             position: myCenter,
                             icon: lineSymbol,
                             shape: shape,
-                            title: "Seller"
+                            title: "Seller",
+                            url: "SellerBuyerInterface.html"
                         });
 
                         marker.setMap(map);
                         marker2.setMap(map);
                         marker3.setMap(map);
-
+                        google.maps.event.addListener(marker2, 'click', function () {
+                            window.location.href = marker2.url;
+                        });
+                        google.maps.event.addListener(marker3, 'click', function () {
+                            window.location.href = marker3.url;
+                        });
                         // Info open
                         var infoWindow = new google.maps.InfoWindow({map: map});
 
