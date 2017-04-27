@@ -266,8 +266,17 @@ ul.alert-dropdown {
     background-color: #fff;
 }
 
-.photo > img {
+.photo > img,
+.photo > div > img {
     width: 100%;
+}
+
+.photo > a >.fa {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    font-size: 25px;
+    color: white;
 }
 
 .star {
